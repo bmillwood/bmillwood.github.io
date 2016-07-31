@@ -1,8 +1,9 @@
 ---
 title: Where should I give?
 ---
-I am trying to work out where to give to UK-tax deductible charities 
-(or, in principle, places at least 70% more compelling).
+I am trying to work out where to give a large-ish amount over the next 
+week or two. I currently pay UK tax at the 40% rate, so UK-deductibility 
+gives a 5/3 multiplier on donation value.
 
 ## Causes
 
