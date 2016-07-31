@@ -1,4 +1,4 @@
-updated: $(wildcard content/*) dist/build/site/site
+updated: $(wildcard content/* content/*/*) dist/build/site/site
 	./dist/build/site/site build
 	git splat
 	date > updated

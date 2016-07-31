@@ -2,6 +2,9 @@
 <html
 ><head
   ><title>$title$ bmillwood.github.io</title
-></head><body
+  ><link rel="stylesheet" type="text/css" href="/css/default.css"
+></head
+><body
+><h1>$title$</h1
 >$body$</body
 ></html>

@@ -9,10 +9,20 @@ config =
     deployCommand = "git splat"
   }
 
+deContentAnd :: Routes -> Routes
+deContentAnd = composeRoutes (gsubRoute "content/" (const ""))
+
 main :: IO ()
 main = hakyllWith config $ do
+  match "content/*.template" $ compile templateCompiler
+
+  match "content/css/*.css" $ do
+    route $ deContentAnd idRoute
+    compile copyFileCompiler
+
   match "content/**.markdown" $ do
-    route $ composeRoutes
-      (gsubRoute "content/" (const ""))
-      (setExtension "html")
-    compile pandocCompiler
+    route $ deContentAnd (setExtension "html")
+    compile $
+      pandocCompiler
+      >>= loadAndApplyTemplate "content/default.template" defaultContext
+      >>= relativizeUrls
