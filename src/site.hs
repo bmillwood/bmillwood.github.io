@@ -11,7 +11,7 @@ config =
 
 main :: IO ()
 main = hakyllWith config $ do
-  match "content/*.markdown" $ do
+  match "content/**.markdown" $ do
     route $ composeRoutes
       (gsubRoute "content/" (const ""))
       (setExtension "html")
