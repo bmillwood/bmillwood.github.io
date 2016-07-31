@@ -4,7 +4,7 @@
   ><title>$title$ bmillwood.github.io</title
   ><link rel="stylesheet" type="text/css" href="/css/default.css"
 ></head
-><body
+><body><div id="content"
 ><h1>$title$</h1
->$body$</body
+>$body$</div></body
 ></html>

@@ -1,3 +1,10 @@
 body {
-	font-family: Times New Roman, serif
+	font-family: "Linux Libertine O", serif;
+	font-size: large;
+	background-color: darkslateblue;
+	color: white;
+}
+div#content {
+	max-width: 30em;
+	margin: 0 auto;
 }
