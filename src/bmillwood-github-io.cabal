@@ -1,0 +1,12 @@
+Cabal-version: >= 1.10
+
+Name:    bmillwood-github-io
+Version: 0.1
+
+Build-type: Simple
+
+Executable site
+  Main-is:          site.hs
+  Build-depends:    base == 4.*, hakyll == 4.8.*
+  GHC-options:      -threaded
+  Default-language: Haskell2010

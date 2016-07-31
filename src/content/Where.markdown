@@ -38,4 +38,5 @@ impact doesn't seem as obviously / consistently direct.
 
 ### GiveWell
 
-I'm not sure what GiveWell actually needs is more money.
+I'm not sure what GiveWell actually needs is more money. Plus they're 
+not UK-tax deductible anyway.
