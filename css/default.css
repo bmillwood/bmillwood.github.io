@@ -8,3 +8,10 @@ div#content {
 	max-width: 30em;
 	margin: 0 auto;
 }
+h3 {
+	margin: 0;
+	padding: 0 0.5em;
+}
+p {
+	padding: 0 1em;
+}
