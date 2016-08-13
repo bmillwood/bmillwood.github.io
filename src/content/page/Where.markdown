@@ -24,12 +24,9 @@ deals right now and money right now is particularly important.
 
 ## Meta organisations
 
-### Giving What We Can
+### GWWC
 
-GWWC has a good story for being a very important cause to work on. I've 
-never been extremely excited or impressed by their insight or 
-accomplishments, though. I haven't yet worked out what they would do 
-differently if they had more money.
+See [their page](/page/Giving What We Can.html).
 
 ### 80k
 
