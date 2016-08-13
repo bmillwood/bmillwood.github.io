@@ -61,6 +61,7 @@ just talk to GWWC directly about what's happened since then. But in the
 meantime, let's find out what their plans were.
 
 The report discusses:
+
 * Community building
 * GWWC Trust
 * Research
