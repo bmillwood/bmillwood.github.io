@@ -17,7 +17,17 @@ p {
 }
 a {
 	color: lightsteelblue;
+	text-decoration: none;
+}
+a:before {
+	content: "[";
+}
+a:after {
+	content: "]";
 }
 a:visited {
 	color: steelblue;
+}
+blockquote {
+	border-left: 0.3em solid midnightblue;
 }
