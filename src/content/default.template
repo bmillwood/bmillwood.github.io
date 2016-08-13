@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html
 ><head
-  ><title>$title$ bmillwood.github.io</title
+  ><meta charset="UTF-8"
   ><link rel="stylesheet" type="text/css" href="/css/default.css"
+  ><title>$title$ bmillwood.github.io</title
 ></head
 ><body><div id="content"
 ><h1>$title$</h1
