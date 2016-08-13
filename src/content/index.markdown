@@ -1,8 +1,8 @@
 ---
 title: index
 ---
-# Summary
+## Summary
 * [Where should I give?](/page/Where.html)
 
-# Metacharity "reviews"
+## Metacharity "reviews"
 * [Giving What We Can](/page/Giving What We Can.html)
