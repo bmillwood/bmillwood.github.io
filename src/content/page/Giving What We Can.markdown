@@ -107,4 +107,61 @@ straightforwardly the value of all tax that was deducted by virtue of
 giving via the Trust.
 
 They're thinking of setting up a US trust as well. This seems also like 
-a good thing.
+a good thing, although I don't know a bunch about US taxes.
+
+#### Research
+
+Per the above this doesn't seem like it's going to continue in its 
+current form. Which I think is probably a net win. In the future, it 
+could be nice to have more than one GiveWell, to form a more independent 
+consensus and lessen the chances of systematic error. But I'd guess 
+(fairly baselessly) that we're not at the stage where that's the most 
+efficient use of resources.
+
+It's interesting to see how the fundraising prospectus for Winter 2015 
+doesn't appear to have anticipated that shift, and seems very much about 
+how totally important their research is. I think GWWC perhaps lacks the 
+well-developed instinct that (say) GiveWell has for critically 
+evaluating the usefulness (or otherwise) of its own programs. Or perhaps 
+it does have that instinct, but it's slightly less open / public about 
+it. They do, to their credit, mention that GiveWell is also in the space 
+and "increasingly professionalized", but I'd like to have seen more said 
+about the perceived value added there. Perhaps it's moot now.
+
+Anyway, the research team at GWWC is going to continue to exist (after 
+some restructuring / reshuffling) and they're proceeding as follows:
+
+> Our main focus within charitable research will be experimenting with a 
+> new project: boutique philanthropic advice to major donors. We’ve 
+> found that there is notable demand for evidence-based charity research 
+> from major donors who, for a variety of reasons, do not want simply to 
+> support GiveWell’s top charities or to work with Open Philanthropy. 
+> (Often, the donor is interested in a particular cause area, such as 
+> disaster preparedness, that is different from the work of GiveWell’s 
+> top charities.) 
+
+On the face of it there's certainly potential for serious impact here. 
+It seems a valuable thing to be doing. I have a mild concern that we're 
+compromising on cause-neutrality here, but if we can't turn people 
+cause-neutral, then ensuring their cause-partial actions are based on 
+sound evidence and thoughtful analysis is *probably* still a win. If it 
+comes to finding the most effective method of treating some 
+exceptionally rare disease or solving some basically unburdensome 
+problem, though, that seems like we've turned the wrong way.
+
+Anyway I've written a lot about this in proportion to how much we 
+actually know about what it will look like.
+
+The "organisational changes" post also mentions that *some* traditional 
+work, in areas not covered by GiveWell, may continue (although we have 
+to wonder, *why* aren't those areas covered by GiveWell?) and also – 
+more intriguingly – there's the prospect of some fundamentals research. 
+My intuition is to be somewhat excited about fundamentals research, but 
+slightly skeptical – the right time to do fundamentals research to me 
+seems like when you've already got some field experience and a concrete 
+context in which to frame it. We're probably approximately there but 
+it's not totally obvious when it's going to earn the most payoff.
+
+There's also the "Oxford Institute for Effective Altruism" on the way, 
+but by the sounds of it that's grant-funded and so not directly relevant 
+to the question of whether to donate.
