@@ -4,9 +4,11 @@ title: Giving What We Can review
 ## My key questions
 
 * What is the new research arm going to do?
-  * What qualifies GWWC researchers to do their research? What's their 
-    comparative advantage like?
-  * What of the overlap with the Foundational Research Institute?
+    * What qualifies GWWC researchers to do their research? What's their 
+      comparative advantage like?
+    * Is there (will there be) duplicated work with the Foundational 
+      Research Institute? What about with the Oxford Institute for 
+      Effective Altruism?
 
 ## What do they do?
 
@@ -29,10 +31,10 @@ Pledge.
 
 GWWC run the GWWC Trust, which simplifies donating for many people and 
 provides tax-deductibility to UK donors for some non-UK organisations. 
-This is the only reason I use it, so that I can donate to GiveDirectly 
-and DtWI. It's not clear to me how common that is as a reason for using 
-the Trust or how much money is redirected from tax payments in this way, 
-although [we know that &gt;$1m goes through the 
+The latter is the only reason I use it, so that I can donate to 
+GiveDirectly and DtWI. It's not clear to me how common that is as a 
+reason for using the Trust or how much money is redirected from tax 
+payments in this way, although [we know that &gt;$1m goes through the 
 trust](https://www.givingwhatwecan.org/fundraising/#what-we-do-trust). 
 (Unanswered question: how much social good does it do to redirect £x 
 from tax payments to charity? Tax money on average probably does more 

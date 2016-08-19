@@ -8,9 +8,24 @@ gives a 5/3 multiplier on donation value.
 ## Plan
 
 I should learn enough about the following EA meta organisations to write 
-a page on them in similar depth to the one I've already done on GWWC. If 
-reading about these organisations leads to new organisations I need to 
-find out about, I should do that too.
+a page on them in similar depth to the one I've already done on GWWC:
+
+* 80,000 Hours
+* Charity Science / Charity Entrepeneurship
+
+I should do at least a superficial investigation into these:
+
+* Global Priorities Project (insofar as it still exists post-CEA-merger)
+* .impact
+* TLYCS
+* others linked from the EA hub page
+
+I should look at the EA wiki and see if what I'm writing has a natural 
+home there.
+
+### Not investigating
+
+* Animal Charity Evaluators (see below re: animal welfare)
 
 ## Prior strategy
 
