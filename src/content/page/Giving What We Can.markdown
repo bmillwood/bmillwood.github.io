@@ -1,10 +1,12 @@
 ---
 title: Giving What We Can review
 ---
-GWWC has a good story for being a very important cause to work on. I've 
-never been extremely excited or impressed by their insight or 
-accomplishments, though. I haven't yet worked out what they would do 
-differently if they had more money.
+## My key questions
+
+* What is the new research arm going to do?
+  * What qualifies GWWC researchers to do their research? What's their 
+    comparative advantage like?
+  * What of the overlap with the Foundational Research Institute?
 
 ## What do they do?
 
@@ -38,6 +40,10 @@ good than my spending money (or my unspent money!), but how much? At the
 same time, some would certainly argue that there are government projects 
 whose budget would be better served even being redirected to, say, the 
 bottom of the sea.)
+
+I've always been a bit disappointed that the Trust doesn't integrate 
+with MyGiving in some labour-saving way. But that's probably neither 
+here nor there.
 
 ### ["Our Impact"](https://www.givingwhatwecan.org/impact/)
 
@@ -156,11 +162,12 @@ The "organisational changes" post also mentions that *some* traditional
 work, in areas not covered by GiveWell, may continue (although we have 
 to wonder, *why* aren't those areas covered by GiveWell?) and also – 
 more intriguingly – there's the prospect of some fundamentals research. 
-My intuition is to be somewhat excited about fundamentals research, but 
-slightly skeptical – the right time to do fundamentals research to me 
-seems like when you've already got some field experience and a concrete 
-context in which to frame it. We're probably approximately there but 
-it's not totally obvious when it's going to earn the most payoff.
+This at least is something that GiveWell doesn't do, although it turns 
+out that there's an organisation called the [Foundational Research 
+Institute](https://foundational-research.org/about/) and maybe there 
+will be overlap there. I also wonder who on the GWWC team is qualified 
+to do this research, and how that research will be directed. Again, it 
+seems too early to say much about this.
 
 There's also the "Oxford Institute for Effective Altruism" on the way, 
 but by the sounds of it that's grant-funded and so not directly relevant 

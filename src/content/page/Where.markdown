@@ -5,37 +5,78 @@ I am trying to work out where to give a large-ish amount over the next
 week or two. I currently pay UK tax at the 40% rate, so UK-deductibility 
 gives a 5/3 multiplier on donation value.
 
-## Causes
+## Plan
 
-The main question I'm trying to answer here is "direct or meta?"
+I should learn enough about the following EA meta organisations to write 
+a page on them in similar depth to the one I've already done on GWWC. If 
+reading about these organisations leads to new organisations I need to 
+find out about, I should do that too.
 
-Meta makes bold claims about itself, and intuitively it does seem like 
-well-run meta organisations could have seriously high impact 
-multipliers. But it feels like there's lower accountability there – who 
-evaluates the evaluators? Well, they do at least evaluate themselves.
+## Prior strategy
 
-## Direct organisations
+Give something like 75% to AMF, 15% GiveDirectly, 10% DtWI. This is 
+precisely per GiveWell's recommendations of now quite a long time ago 
+(although they weren't exactly that... maybe I did something like 
+increase my AMF share without increasing the other ones, I don't really 
+remember).
 
-### Against Malaria Foundation
+## Major challenges to prior strategy
 
-Traditional favourite and recommended by GiveWell. Most of my money goes 
-here at the moment. There's been some suggestion that they're doing some 
-deals right now and money right now is particularly important.
+### GiveWell updated
 
-## Meta organisations
+GiveWell's advice is to just go for AMF now. If I don't do something 
+radically different, I should at least do this.
 
-### GWWC
+### AI risk
 
-See [their page](/page/Giving What We Can.html).
+Some people think that AI risk or something like it is *overwhelmingly* 
+the most important cause. That's not by itself enough for me to pay 
+attention (e.g. I don't make a serious effort to find out if there is a 
+God, even though the cost/benefit claimed is huge), but that coupled 
+with a sense that concern about AI is increasingly mainstream (Hawking 
+et al) makes it hard to dismiss. I've put this off for a long time 
+partially because I know that contributing to AI safety would be 
+basically unsatisfying. That's not just emotional bias, though: 
+partially it would be unsatisfying because the opportunities to learn 
+are pretty limited. I think without good feedback loops, EA is pretty 
+extremely likely to veer off course.
 
-### 80k
+I generally don't hear people rave about X-risks that are not AI risk. 
+That puzzles me a little bit, but I guess the path forward for (say) 
+biosecurity is not as clear.
 
-80k's website is excellent, and I've been to one of their careers talks 
-and it was also excellent. My naïve assessment is that they're on the 
-ball. However, their cause isn't as obviously urgent in my eyes – their 
-impact doesn't seem as obviously / consistently direct.
+### Meta
 
-### GiveWell
+Some people think that meta-organizations are overwhelmingly (perhaps an 
+order of magnitude, perhaps more) more effective than direct donations, 
+because of multiplier effects. I'm sort of suspicious of this kind of 
+thinking because it feels on some dumb gut level like the same kind of 
+thinking that makes pyramid schemes sound like a really good idea. 
+Making a few naïve and somewhat evidence-sparse guesses about payoffs of 
+things can lead to some wildly wrong conclusions. That said, if you 
+believe in the EA movement (which seems like no small if all on its own) 
+then it does make sense that growing it would be a big deal. But maybe 
+slow growth is actually the right thing for the movement – a lot of 
+organizations seem very much to be learning on their feet and developing 
+in all sorts of interesting ways, so we don't want to burn out all of 
+our novelty appeal before we know what to do with it or have people make 
+up their minds on us before we know what we want them to think. All of 
+that argument is a bit speculative, and the obvious view to take is that 
+growth is good and more growth is more better.
 
-I'm not sure what GiveWell actually needs is more money. Plus they're 
-not UK-tax deductible anyway.
+## Non-challenges to prior strategy
+
+I downweight animal welfare a lot compared to many EA figures. This is 
+because I value a lot of things other than suffering / happiness, and 
+the other things I value seem to be particularly human, like 
+meaningfulness, curiosity, discovery, and self-actualisation.
+
+That said, I'm a vegetarian, and that's mostly out of acknowledgement 
+that animal welfare doesn't have to be very important relative to human 
+welfare in order for you to want to stop factory farming, because 
+factory farming is so terrible. I don't know exactly how terrible, 
+because I haven't researched it – this is a problem, although one I'm 
+seemingly willing to put off forever. Anyway the point is there is at 
+least in principle some amount of terribleness which would make it still 
+the most urgent cause, even though it doesn't promote my non-hedonic 
+values.
