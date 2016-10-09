@@ -2,6 +2,11 @@
 title: little thoughts
 ---
 
+**2016-10-09 23:14 HKT**: I'll care what you think about the way I dress
+when you care what I think about the way I dress
+
+---
+
 **2016-08-27 22:47 HKT**: "It is easier to regret what you didn't do 
 than what you did". But is that suggesting the regret-minimising 
 approach of doing things rather than not doing them, or that it's harder 
