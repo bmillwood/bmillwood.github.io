@@ -8,45 +8,52 @@ title: Evaluating the UK 2017 General Election
 2. I think I've heard she was polling better than the Conservative party 
    as a whole. Is this true, and if so why?
 3. Given #2, her strategy of focusing on herself and not her policies, 
-   having a "presidential-style" race, seemed like a smart one. What 
-   went wrong?
+   having a "presidential-style" race, seemed like a smart one. When and 
+   why did that stop looking true?
 
 ## Low expectations for Corbyn
 
 What led to those expectations?
 
 1. Bad polling
-2. A perception (genuine or not) among the media and politicians that 
-   Corbyn was a bad politician or a bad leader
-3. Party infighting, high turnover
+2. The media and politicians claimed (sincerely or not) that Corbyn was 
+   a bad politician or a bad leader
+3. Party infighting, high turnover made Labour appear to lack competence 
+   or expertise
 
 The first two certainly feed each other. My perception is that #2 came 
 first and was visible pretty much as soon as he was introduced into the 
 leadership race.
 
 Can we do anything to compare opinions of Corbyn with opinions of 
-Labour?
+Labour? That could help assign blame/credit for the dip and then rise in 
+fortunes.
 
 ### Did Corbyn only do well relative to expectations, or overall as well?
 
-Corbyn got a greater vote share versus the 2015 election, but... so did 
-May. (See "Collapse of third-party votes").
+Corbyn got a greater vote share than Ed did in the 2015 election, but... 
+May improved on DC too. (See "Collapse of third-party votes").
 
-More people went Con → Lab than went Lab → Con.
+More people went Con → Lab than went Lab → Con. That seems like a 
+measure of overall success.
 
 ### Did Corbyn only do well because May did badly?
 
 * Con party manifesto was not costed (do people care?)
-* "Dementia tax" blunder, U-turn
+* "Dementia tax" blunder and U-turn
 * "I will not hold an election" U-turn
 
-Were these mistakes substantively larger than the normal background 
-level of mistakes?
+Were these mistakes above the normal background level of political 
+disasters?
 
 I guess it would be productive to look at by-time polling numbers and 
 compare them with when these things occurred. But I don't know if people 
 who change their minds *because* of blunders like that change them 
 *immediately after* said blunders.
+
+Hoe does she measure up to Davey C of 2015 or 2010? Do the above only 
+look like blunders (over and above the background rate of political 
+blunders) because we already know her support nosedove?
 
 ## Collapse of third-party votes
 
@@ -75,6 +82,8 @@ before and didn't manage to do it again, so this year's performance is
 more "regression to the mean" than a dramatic failure. After all, as was 
 widely pointed out, it was near-impossible for the SNP to do *better* 
 than 2015.
+
+Maybe it would be better to compare against 2010 instead.
 
 ## References
 
