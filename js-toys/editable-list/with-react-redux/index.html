@@ -7,13 +7,24 @@
         </style>
     </head>
     <body>
-        <p>Here is your list:</p>
+        <p>This is an editable tree-structure list implemented with React /
+        Redux.</p>
+        <p>Known weirdnesses in the code:</p>
+        <ul>
+          <li>I don't use npm or compile anything, so the module boundaries
+            are weak and sort of terrible.</li>
+          <li>There turns out to only really be one component, so many of the
+            interesting aspects of React/Redux aren't illustrated.</li>
+        </ul>
         <div id="reactContainer"></div>
 
-        <script src="https://unpkg.com/redux@4.0.5/dist/redux.js" crossorigin></script>
-        <script src="https://cdnjs.com/libraries/react-redux/7.2.0/react-redux.js" crossorigin></script>
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/redux@4.0.5/dist/redux.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.js" crossorigin></script>
+        <script src="actions.js"></script>
+        <script src="state.js"></script>
+        <script type="text/babel" src="view.js"></script>
         <script type="text/babel" src="editable-list.js"></script>
     </body>
 </html>
