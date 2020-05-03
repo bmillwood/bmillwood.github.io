@@ -11,7 +11,7 @@ function ELNode(props) {
   } else {
     content = (
       <span>
-      <button className="add child" onClick={props.addChild}>child</button>
+      <button className="child" onClick={props.addChild}>add child</button>
       <button className="edit" onClick={props.startEditing}>edit</button>
       {" " + props.content}
       </span>
