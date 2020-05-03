@@ -1,7 +1,8 @@
 'use strict';
+const createStore = window.Redux.createStore;
 
 function ELNode(props) {
-  var content;
+  let content;
   if(props.editing) {
     content = (
       <input type="text"
@@ -22,7 +23,7 @@ function ELNode(props) {
   if(props.children.length == 0) {
     return <div>{content}</div>;
   } else {
-    var children = props.children.map(child => <li>{child}</li>);
+    const children = props.children.map(child => <li>{child}</li>);
     return (
       <div>
       {content}
@@ -52,17 +53,17 @@ class EditableList extends React.Component {
   }
 
   getAt(path) {
-    var node = this.state.root;
-    for(var i = 0; i < path.length; i++) {
+    let node = this.state.root;
+    for(let i = 0; i < path.length; i++) {
       node = node.children[path[i]];
     }
     return node;
   }
 
   editAt(path, f) {
-    var newRoot = Object.assign({}, this.state.root);
-    var node = newRoot;
-    for(var i = 0; i < path.length; i++) {
+    const newRoot = Object.assign({}, this.state.root);
+    let node = newRoot;
+    for(let i = 0; i < path.length; i++) {
       const ci = path[i];
       node.children = Object.assign({}, node.children);
       node.children[ci] = Object.assign({}, node.children[ci]);
