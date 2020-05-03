@@ -13,7 +13,7 @@ function ELNode(props) {
       <span>
       <button className="add child" onClick={props.addChild}>child</button>
       <button className="edit" onClick={props.startEditing}>edit</button>
-      {props.content}
+      {" " + props.content}
       </span>
     );
   }
