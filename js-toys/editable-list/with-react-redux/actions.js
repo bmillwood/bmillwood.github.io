@@ -1,5 +1,5 @@
 'use strict';
-/* The convention in the Redux docs is to name you actions in all caps.
+/* The convention in the Redux docs is to name your actions in all caps.
    I don't like it, it makes me feel like I'm writing C again. But I would use
    it if I was working with other Redux devs, I guess. */
 const Add_child = 'Add_child';
