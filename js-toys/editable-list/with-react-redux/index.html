@@ -9,12 +9,16 @@
     <body>
         <p>This is an editable tree-structure list implemented with React /
         Redux.</p>
-        <p>Known weirdnesses in the code:</p>
+        <p>Next things I would work on if I spent more time on it:</p>
         <ul>
-          <li>I don't use npm or compile anything, so the module boundaries
-            are weak and sort of terrible.</li>
+          <li>I don't use npm or compile anything, so I can't use
+            import/export. This means you can't see that (e.g.) editableList
+            comes from state.js without just going and finding it.</li>
           <li>There turns out to only really be one component, so many of the
-            interesting aspects of React/Redux aren't illustrated.</li>
+            interesting aspects of React/Redux aren't really exercised. I could
+            conceivably split each line (managing editability, for example)
+            into its own component.</li>
+          <li>More features, like moving subtrees around.</li>
         </ul>
         <div id="reactContainer"></div>
 
