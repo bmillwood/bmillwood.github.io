@@ -9,7 +9,6 @@
 <li>I also copy (using rsync) the first snapshot of every month to another external disk that uses zfs instead, and then take a snapshot of that. So even if btrfs mysteriously chewed up all my data, I still have monthly snapshots on zfs going back years.</li>
 <li>I then delete old snapshots from my laptop disk to free up space (it’s smaller than the external disks).</li>
 <li>My root disk is pretty small and I don’t store a lot of multimedia stuff that would kick my storage needs up a lot. I don’t know how well this strategy scales if you do (although I’d guess… fine? Stuff just takes longer?)</li>
-<li>Stop using ext4. A lot of things have happened in filesystem technology since then.</li>
 </ul>
 <p>If you’re looking for a technical guide, then “btrfs and zfs both support copy-on-write snapshots” is already 80% of the relevant technical detail of this article. Most of the rest is conceptual stuff about how I think about backups. If you need more technical detail and know how to contact me, feel free to ask.</p>
 <h2 id="types-of-failure">Types of failure</h2>
@@ -36,9 +35,7 @@
 <p>I think for people with ordinary data that’s an ordinary amount of valuable, this risk might be too unlikely to bother with. But there are nice things about having two backup disks anyway, and all it really costs to have them on different filesystems is (a) my zfs snapshots are less frequent than my btrfs ones, and (b) taking a zfs snapshot is slower than a btrfs one. These costs don’t feel burdensome for me.</p>
 <h2 id="protecting-against-hardware-failure">Protecting against hardware failure</h2>
 <p>The thing that makes hardware failures comparatively easy to deal with is that they’re generally random and uncorrelated, either with each other or with other kinds of failure. This means that as long as (a) any single hardware failure doesn’t ruin you, and (b) you can quickly notice and respond to hardware failures, it’s pretty unlikely you’ll lose data this way, because you’ll be able to restore redundancy before you’re hit by it again.</p>
-<ol type="a">
-<li>is pretty easy to achieve, and in particular my scheme above with the external disks already achieves it. (b) is a little trickier.</li>
-</ol>
+<p>(a) is pretty easy to achieve, and in particular my scheme above with the external disks already achieves it. (b) is a little trickier.</p>
 <p>My crude mental model is that disks can fail in two ways: they can just totally pack it in and die loudly, entirely failing to mount anymore, or they can quietly flip some bits in a way that makes your data not what you thought it was.</p>
 <p>One of the drawbacks of copy-on-write snapshots in the style we’ve been describing is a consequence of one of its strengths: if a file doesn’t change between snapshots, it’s only stored once. This is an essential property, without which there’d be no way we could store a month of snapshots on a disk not much larger than a single snapshot. But the drawback is that if there was a disk error that corrupted that file, it’s corrupted on every snapshot at once.</p>
 <p>Modern filesystems have checksums that can detect this condition, but… you have to actually look at the checksums. btrfs has <code>btrfs scrub</code> for this, but I don’t run it in any systematic way. Probably I should fix that.</p>

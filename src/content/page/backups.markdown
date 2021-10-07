@@ -22,8 +22,6 @@ title: Backups can be easy!
 * My root disk is pretty small and I don't store a lot of multimedia stuff that
   would kick my storage needs up a lot. I don't know how well this strategy
   scales if you do (although I'd guess... fine? Stuff just takes longer?)
-* Stop using ext4. A lot of things have happened in filesystem technology since
-  then.
   
 If you're looking for a technical guide, then "btrfs and zfs both support
 copy-on-write snapshots" is already 80% of the relevant technical detail of this
@@ -123,7 +121,7 @@ doesn't ruin you, and (b) you can quickly notice and respond to hardware
 failures, it's pretty unlikely you'll lose data this way, because you'll be able
 to restore redundancy before you're hit by it again.
 
-(a) is pretty easy to achieve, and in particular my scheme above with the
+\(a) is pretty easy to achieve, and in particular my scheme above with the
 external disks already achieves it. (b) is a little trickier.
 
 My crude mental model is that disks can fail in two ways: they can just totally
