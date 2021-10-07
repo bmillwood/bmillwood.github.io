@@ -65,6 +65,9 @@ ZFS and BTRFS (and, I'm sure, others) both support transparent compression and
 copy-on-write snapshots. I actually use a combination of both, for reasons I
 discuss below.
 
+For what it's worth, I expect that analogues of these features are available on
+OS X and Windows. I just don't know about them.
+
 ## My process
 
 I take a snapshot of my personal laptop's disk at startup.
