@@ -70,7 +70,7 @@ OS X and Windows. I just don't know about them.
 
 ## My process
 
-I take a snapshot of my personal laptop's disk at startup.
+My laptop automatically takes a snapshot of its disk every time I start it up.
 
 About once a month, I sync all these snapshots to an external disk, which has
 every snapshot I've made since 2018.

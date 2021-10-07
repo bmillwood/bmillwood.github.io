@@ -12,7 +12,7 @@
 <p>ZFS and BTRFS (and, I’m sure, others) both support transparent compression and copy-on-write snapshots. I actually use a combination of both, for reasons I discuss below.</p>
 <p>For what it’s worth, I expect that analogues of these features are available on OS X and Windows. I just don’t know about them.</p>
 <h2 id="my-process">My process</h2>
-<p>I take a snapshot of my personal laptop’s disk at startup.</p>
+<p>My laptop automatically takes a snapshot of its disk every time I start it up.</p>
 <p>About once a month, I sync all these snapshots to an external disk, which has every snapshot I’ve made since 2018.</p>
 <p>I also copy (using just plain rsync) the first snapshot of every month to another external disk that uses zfs instead, and then take a snapshot of that. So even if btrfs mysteriously chewed up all my data, I still have monthly snapshots on zfs going back years.</p>
 <p>I then delete old snapshots from my laptop disk to free up space (it’s smaller than the external disks).</p>
