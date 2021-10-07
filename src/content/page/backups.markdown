@@ -19,11 +19,11 @@ back very far, so if I wanted to restore something I deleted a while ago, it
 would be impossible.
 
 I want to compress my backups so they'll take less space, but compressing the
-whole backup as a single archive is a huge headache to decompress, for example
-to restore a single file or check what version I've backed up. Meanwhile,
+whole backup as a single archive is a huge headache to access, for example to
+restore a single file or check what version I've backed up. Meanwhile,
 compressing each file individually means that restoring the backup requires
-doing something a bit delicate and sensible with replicating a directory
-hierarchy but with a decompression command run (only once!) on every file.
+doing something a bit delicate in replicating a directory hierarchy but with a
+decompression command run (only once!) on every file.
 
 ## What it's actually like to take backups
 
