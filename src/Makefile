@@ -1,8 +1,4 @@
-updated: dist/build/site/site
-	./dist/build/site/site build
-	git splat
-	date > updated
-
-dist/build/site/site: site.hs bmillwood-github-io.cabal
-	cabal build
-	./dist/build/site/site clean
+updated: site.hs bmillwood-github-io.cabal
+	cabal run site -- build
+	rsync -r _site/* ..
+	date --iso-8601 > updated

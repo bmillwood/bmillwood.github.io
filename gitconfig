@@ -1,3 +1,0 @@
-# git config --local include.path ../gitconfig
-[alias]
-	splat = "!rsync -r src/_site/* ."

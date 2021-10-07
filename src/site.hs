@@ -4,10 +4,7 @@ module Main (main) where
 import Hakyll
 
 config :: Configuration
-config =
-  defaultConfiguration{
-    deployCommand = "git splat"
-  }
+config = defaultConfiguration
 
 deContentAnd :: Routes -> Routes
 deContentAnd = composeRoutes (gsubRoute "content/" (const ""))
