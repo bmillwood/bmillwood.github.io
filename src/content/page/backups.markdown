@@ -1,43 +1,95 @@
 ---
-title: Backups can be easy!
+title: Backups on Linux can be easy!
 ---
-## Summary
+## What I thought it would be like to take backups
 
-Using a newer filesystem like btrfs or zfs makes taking a full, read-only
-snapshot of your entire filesystem a near-instant operation.
+I used to believe that doing backups of my data properly would be a slow,
+intensive process. Every now and then I'd have to copy all the files on my disk
+to another disk. If I didn't want some weird garbled transitional form of my
+data, I'd probably have to not do too much else with my laptop while doing the
+backup. Maybe I'd have to do it overnight.
 
-They're copy-on-write so you don't end up storing files twice if they don't
-change. This means you can have lots of snapshots without much space overhead.
+I'd need pretty much the full size of my disk in backup space for every copy of
+the files I wanted. Given that my files are a mixture of files that change very
+infrequently and files that change very frequently, I'd either have to have lots
+of redundant copies of some files, or not be able to back up any files very
+often. Similarly, I'd either have backups infrequently, so I'd lose a lot of
+recent stuff if I needed to restore from them, or I wouldn't have backups going
+back very far, so if I wanted to restore something I deleted a while ago, it
+would be impossible.
 
-You can sync them with an external disk, and if the external disk already has
-a previous snapshot, you only need to send the diffs, so the syncing can be
-fast.
+I want to compress my backups so they'll take less space, but compressing the
+whole backup or compressing each file both make accessing backed up files more
+awkward in different ways, and checking what version of a file is backed up also
+requires me to decompress it somewhere first, which can be particularly awkward
+for large files. Doing something more complicated, like running an old version
+of a program with all its dependencies, sounds like a mess of decompressing
+various things in various places, to the point that I'd probably just not bother
+considering it an option.
 
-I use btrfs, and take a snapshot of my personal laptop's disk at startup.
+## What it's actually like to take backups
+
+I can, at any time, take a full snapshot of the contents of my disk, instantly,
+with no interruption to what I'm doing. Snapshots share their identical parts,
+so each one takes up a pretty small amount of space, and I can have a lot of
+them. The backups are stored compressed, but transparently: I can access any
+part of any file as if the snapshot is a normal filesystem. I can transfer these
+snapshots onto an external drive by only sending the differences between the
+latest snapshots and the ones I've already transferred, so it's relatively quick
+and simple to do so.
+
+### How does that work?
+
+The main technologies here are transparent disk compression, and copy-on-write
+snapshots.
+
+There's nothing technologically difficult about transparent disk compression,
+but when I started looking into this, I didn't realize it was an
+easily-accessible, standard feature on many more modern file systems. One of the
+lessons to learn here is simply that filesystem technology has moved on since
+ext4 was developed.
+
+Copy-on-write snapshots seem significantly more "magic" at first glance, but
+they're simpler than they sound. After the snapshot time, whenever any file is
+written to, instead of writing to its original location, the filesystem copies
+the block that's being written to a new location and makes the change there
+instead, and updates the filesystem metadata to say "if you're looking at the
+snapshot, look at the old location for this block, whereas if you want the
+latest copy, look at this new location". There's some details to figure out in
+how you track all the new locations, but that's the core of the idea. You only
+copy a filesystem block, not necessarily the whole file, so this doesn't incur
+too significant a penalty in write performance, and of course there's a bunch of
+caching in the way anyway, so the write performance penalty may not be
+noticeable in practice. Again, the lesson is that modern filesystems make some
+hard problems easy, if only you know to use the features they offer you.
+
+ZFS and BTRFS (and, I'm sure, others) both support transparent compression and
+copy-on-write snapshots. I actually use a combination of both, for reasons I
+discuss below.
+
+## My process
+
+I take a snapshot of my personal laptop's disk at startup.
 
 About once a month, I sync all these snapshots to an external disk, which has
 every snapshot I've made since 2018.
 
-I also copy (using rsync) the first snapshot of every month to another external
-disk that uses zfs instead, and then take a snapshot of that. So even if btrfs
-mysteriously chewed up all my data, I still have monthly snapshots on zfs going
-back years.
+I also copy (using just plain rsync) the first snapshot of every month to
+another external disk that uses zfs instead, and then take a snapshot of that.
+So even if btrfs mysteriously chewed up all my data, I still have monthly
+snapshots on zfs going back years.
 
 I then delete old snapshots from my laptop disk to free up space (it's smaller
 than the external disks).
 
-My root disk is pretty small and I don't store a lot of multimedia stuff that
-would kick my storage needs up a lot. I don't know how well this strategy scales
-if you do (although I'd guess... fine? Stuff just takes longer?)
-  
-If you're looking for a technical guide, then "btrfs and zfs both support
-copy-on-write snapshots" is already 80% of the relevant technical detail of this
-article. Most of the rest is conceptual stuff about how I think about backups.
-If you need more technical detail and know how to contact me, feel free to ask.
+I won't go into the technical instructions in detail, partly because I don't
+remember everything I did. The main purpose of this page is to describe
+abstractly what's possible, and how I made the choices I did in setting up the
+above process.
 
 ## Types of failure
 
-Perhaps the most obvious ways to lose data are:
+Why have backups? Perhaps the most obvious ways to lose data are:
 
 * The disk storing the data stops working,
 * You accidentally tell your computer to destroy it.
@@ -45,6 +97,9 @@ Perhaps the most obvious ways to lose data are:
 While looking for a solution for these, I realized there was another:
 
 * The code for the filesystem you use has a bug, and wipes your disk by accident.
+
+These different failures require somewhat different treatments, but human error
+has the potential to be the most destructive, so let's deal with that first.
 
 ## Snapshot backups to prevent human error
 
@@ -94,7 +149,9 @@ recent ones anyway.
 When I decided to use btrfs to solve the above problem, people warned me "btrfs
 is still under active development, a bit on the ambitious side, and has had
 stability problems before. It's possible there could be a bug that would mean it
-just refused to mount any of your disks one day."
+just refused to mount any of your disks one day, and because of all the exotic
+things it does to store your data in clever ways, it could be tricky to
+recover."
 
 Now, btrfs is more stable than it used to be, but it's hard to predict how bugs
 might arise and what their impact could be. Even aside any specific concerns
@@ -104,11 +161,10 @@ seem like a real threat.
 
 My approach to this is to just use two filesystems, and hope they don't both
 have devastating implementation bugs at the same time, which is why my secondary
-backup disk is on zfs. I use plain rsync to copy between them (though,
-importantly, from a snapshot on the source, rather than from the live mounted
-disk, which ensures the zfs drive has fully consistent snapshots as well). This
-avoids any tricky special functionality that might be misimplemented, or
-misunderstood by me.
+backup disk is on zfs. I use plain rsync to copy between them (from a snapshot
+on the source, rather than from the live mounted disk, which ensures the zfs
+drive has fully consistent snapshots as well). This avoids any tricky special
+functionality that might be misimplemented, or misunderstood by me.
 
 I think for people with ordinary data that's an ordinary amount of valuable,
 this risk might be too unlikely to bother with. But there are nice things about
@@ -120,7 +176,7 @@ don't feel burdensome for me.
 ## Protecting against hardware failure
 
 The thing that makes hardware failures comparatively easy to deal with is that
-they're generally random and uncorrelated, either with each other or with other
+they're generally random and uncorrelated, both with each other and with other
 kinds of failure. This means that as long as (a) any single hardware failure
 doesn't ruin you, and (b) you can quickly notice and respond to hardware
 failures, it's pretty unlikely you'll lose data this way, because you'll be able
@@ -149,14 +205,15 @@ don't run it in any systematic way. Probably I should fix that.
 
 I said before that hardware failures are uncorrelated, but it's worth mentioning
 that there are some easy ways to make this accidentally not true. For example,
-if you keep all your backup disks in a stack and then you pour hot chocolate on
-the pile of disks, you have a correlated disk failure. If you keep all the disks
-in your house and your house burns down or someone breaks in, you have a
+if you keep all your backup disks in a pile on your desk and then you pour hot
+chocolate on the pile, you have a correlated disk failure. If you keep all the
+disks in your house and your house burns down or someone breaks in, you have a
 correlated disk failure. In the setup I described, I try to keep the zfs disk in
 a drawer in the office at work, and only bring it home when I'm doing the sync.
-That level of risk seems acceptable to me. Using full-disk encryption helps
-here, because it means that I don't need to worry too much about keeping the
-location I store the disk secure.
+That level of risk seems acceptable to me.
+
+Using full-disk encryption helps here, because it means that I don't need to
+worry too much about keeping the location I store the disk secure.
 
 ## Verifying backups
 
