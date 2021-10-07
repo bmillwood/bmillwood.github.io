@@ -5,6 +5,8 @@ body {
 	color: white;
 }
 div#content {
+	border-left: 1px solid steelblue;
+	padding: 0 1em;
 	max-width: 36em;
 	margin: 0 auto;
 }
